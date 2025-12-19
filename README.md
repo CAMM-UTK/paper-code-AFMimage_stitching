@@ -1,13 +1,10 @@
-[![Paper](https://img.shields.io/badge/paper-arXiv%3A2503.08735-B31B1B.svg)](https://arxiv.org/abs/2503.08735)
-
 
 # A bi-channel Aided Stitching of Atom Force Microscopy Images 
 
 **Huanhuan Zhao**, Ruben Millan-Solsona, Marti Checa, Spenser R. Brown, Jennifer L. Morrell-Falvey, Liam Collins, **Arpan Biswas** 
 
-
  	
-https://doi.org/10.48550/arXiv.2503.08735
+Zhao, H., Millan-Solsona, R., Checa, M. et al. A bi-channel aided stitching of atomic force microscopy images. Sci Rep 15, 41897 (2025). https://doi.org/10.1038/s41598-025-25855-y
 
 
 ### Abstract
@@ -18,13 +15,19 @@ Microscopy is an essential tool in scientific research, enabling the visualizati
 Proposed approach of feature-based bi-channel aided image stitching of microscopy images. Here fig. (a) shows the traditional single-channel stitching of stack of overlapped microscopy images of interest (eg. topographical images) where (b) shows the bi-channel stitching of the topographical images via our proposed approach of using physical information from optimal second imaging channel (Eg. amplitude image). 
 
 ### Description
-This repository includes links, code, scripts, and data to generate the figures in a paper.
+This repository includes links, code, scripts, and data to generate the figures in a paper. 
 
 ### Data
 The samples used in this study correspond to **Pantoea sp. YR343**. The dataset was collected from AFM images, acquired using the DriveAFM system from Nanosurf, as described in [1]. More information on the dataset is provided in the main paper and notebook. The raw dataset is provided in **Data** folder [here](https://github.com/arpanbiswas52/Stitching_AFMimage/tree/main/data). 
 
-### Requirement
-A minimal environment to execute these notebooks can be installed via `pip install -r requirements.txt`
+### Usage
+There are two jupyter notebook files in the **src** folder, [AFM_image_preprocessing.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_image_preprocessing.ipynb) is used to generate flattened topographical images, amplitude images, and differential images. [AFM_stitching_V2.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_stitching_V2.ipynb) is used to stitch the images together. To test the code with the AFM images used in the paper, the user needs to:
+- Step 1: Install environment using `pip install -r requirements.txt`.  [requirements.txt](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/requirements.txt) contains the necessary libraries for executing the notebook.
+- Step 2: Download the datasets from the **Data** folder [here](https://github.com/arpanbiswas52/Stitching_AFMimage/tree/main/data) and unpack it within the same folder as [AFM_stitching_V2.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_stitching_V2.ipynb). 
+- Step 3: Run the [AFM_stitching_V2.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_stitching_V2.ipynb) notebook. 
+- If you are using your own data, you can either preprocess it using [AFM_image_preprocessing.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_image_preprocessing.ipynb) or prepare the flattened images and second channel images by yourself. Remember to change the input path to your own data path when running [AFM_stitching_V2.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_stitching_V2.ipynb).
+
+
 
 
 ### Support
@@ -35,6 +38,6 @@ The authors acknowledge the use of facilities and instrumentation at the UT Knox
 
 
 ### Reference
-[1]Millan-Solsona, R. et al. Analysis of Biofilm Assembly by Large Area Automated AFM. Preprint at https://doi.org/10.21203/rs.3.rs-5537963/v1 (2025).
+[1]Millan-Solsona, R., Brown, S.R., Zhang, L. et al. Analysis of biofilm assembly by large area automated AFM. npj Biofilms Microbiomes 11, 75 (2025). https://doi.org/10.1038/s41522-025-00704-y
 
 
