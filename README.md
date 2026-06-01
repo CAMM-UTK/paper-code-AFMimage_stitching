@@ -1,13 +1,11 @@
-[![Paper](https://img.shields.io/badge/paper-arXiv%3A2503.08735-B31B1B.svg)](https://arxiv.org/abs/2503.08735)
-
 
 # A Fourier-Based Global Denoising Model for Smart Artifacts Removing of Microscopy Images 
 
 **Huanhuan Zhao**, **Connor Vernachio**, **Laxmi Bhurtel**, **Wooin Yang**, Ruben Millan-Solsona, Spenser R. Brown, Marti Checa, Komal Sharma Agrawal, Adam M. Guss, Liam Collins, **Wonhee Ko**, **Arpan Biswas**
 
-
  	
 [https://doi.org/10.48550/arXiv.2503.08735](https://arxiv.org/abs/2511.09734)
+Zhao, H., Millan-Solsona, R., Checa, M. et al. A bi-channel aided stitching of atomic force microscopy images. Sci Rep 15, 41897 (2025). https://doi.org/10.1038/s41598-025-25855-y
 
 
 ### Abstract
@@ -20,12 +18,19 @@ Figure1: Architecture of the proposed Fourier-Based Global Denoising Model (GDM)
 
 ### Description
 This repository includes links, code, scripts, and data to generate the figures in the paper.
+This repository includes links, code, scripts, and data to generate the figures in a paper. 
 
 ### Data
 
 
-### Requirement
-A minimal environment to execute these notebooks can be installed via `pip install -r requirements.txt`
+### Usage
+There are two jupyter notebook files in the **src** folder, [AFM_image_preprocessing.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_image_preprocessing.ipynb) is used to generate flattened topographical images, amplitude images, and differential images. [AFM_stitching_V2.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_stitching_V2.ipynb) is used to stitch the images together. To test the code with the AFM images used in the paper, the user needs to:
+- Step 1: Install environment using `pip install -r requirements.txt`.  [requirements.txt](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/requirements.txt) contains the necessary libraries for executing the notebook.
+- Step 2: Download the datasets from the **Data** folder [here](https://github.com/arpanbiswas52/Stitching_AFMimage/tree/main/data) and unpack it within the same folder as [AFM_stitching_V2.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_stitching_V2.ipynb). 
+- Step 3: Run the [AFM_stitching_V2.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_stitching_V2.ipynb) notebook. 
+- If you are using your own data, you can either preprocess it using [AFM_image_preprocessing.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_image_preprocessing.ipynb) or prepare the flattened images and second channel images by yourself. Remember to change the input path to your own data path when running [AFM_stitching_V2.ipynb](https://github.com/arpanbiswas52/Stitching_AFMimage/blob/main/src/AFM_stitching_V2.ipynb).
+
+
 
 
 ### Support
@@ -33,5 +38,8 @@ The authors (H.Z and A.B) acknowledge the use of facilities and instrumentation 
 
 <img width="400px" src="https://mrsec.org/sites/default/files/MRSEC%20logo_clear%20background.png">
 
+
+### Reference
+[1]Millan-Solsona, R., Brown, S.R., Zhang, L. et al. Analysis of biofilm assembly by large area automated AFM. npj Biofilms Microbiomes 11, 75 (2025). https://doi.org/10.1038/s41522-025-00704-y
 
 
