@@ -1,24 +1,31 @@
-gwyfile==0.2.0
-importlib-metadata==4.6.4
-ipython==8.31.0
-joblib==1.4.2
 matplotlib==3.10.0
 numpy==2.0.0
 scikit-image==0.25.1
 scipy==1.15.1
-stitch2d==1.2
-stitching==0.6.1
 torchmetrics==0.7.0
 torchsummary==1.5.1
 torchversion==0.0.4
+brisque==0.0.17
 os
 cv2
+PIL
+tdqm
+math
 matplotlib.pyplot
 typing
 scipy.optimize
 scipy.ndimage
 scipy.stats
+scipy.signal
 skimage.metrics
 skvideo.measure
-AFMclasses (contains clImage, ChannelType, ExtentionType)
-managefiles (custom module for file management)
+skimage.color
+skimage.feature
+skimage.restoration
+scipy.ndimage
+io, img_as_float
+torch.utils.data
+
+
+
+
